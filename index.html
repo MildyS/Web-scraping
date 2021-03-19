@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gaming News</title>
+  </head>
+  <style>
+    body {
+      background-color: #B9B7BD;
+    }
+    .container {
+          padding: 20px;
+      }
+
+      .child1 {
+          width: 45%;
+          float: left;
+          padding: 20px;
+          border: 5px solid #67595E;
+      }
+      .child2 {
+          width: 45%;
+          float: right;
+          padding: 20px;
+          border: 5px solid #67595E;
+      }
+  </style>
+  <body>
+    <h1 align="middle" style="font-size:60px; color:#000C66">Čo je nové vo svete hier?</h1>
+  <div class="container">
+    <div class="child1">
+      <a style="color:#778A35;font-size:40px;margin-left:40%" href="https://www.sector.sk/novinky/pc-hry">Sector.sk</a>
+      {% for i in range(0,dlzka1) %}
+        <h4 style="font-style:italic">{{ datum1[i]}}</h4>
+        <h2>{{ titul1[i]}}</h2>
+        <p>_______________________________________________________________________</p>
+      {% endfor %}
+    </div>
+    <div class="child2">
+      <a style="color:#778A35;font-size:40px;margin-left:31%" href="https://gamesite.zoznam.sk/">Gamesite.zoznam.sk</a>
+      {% for i in range(0,dlzka2) %}
+        <h4 style="font-style:italic">{{ datum2[i]}}</h4>
+        <h2>{{ titul2[i]}}</h2>
+        <p>_______________________________________________________________________</p>
+      {% endfor %}
+    </div>
+  </div>
+  </body>
+</html>
